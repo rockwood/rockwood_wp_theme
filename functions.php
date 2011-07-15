@@ -21,12 +21,10 @@ if ( is_readable( $locale_file ) )
 if ( ! isset( $content_width ) )
 	$content_width = 640;
 
-if ( !is_admin() ) { // instruction to only load if it is not the admin area
-   // register your script location, dependencies and version
+if ( !is_admin() ) {
+
    wp_register_script('custom_script',
-       get_bloginfo('template_directory') . '/js/custom_script.js',
-       array('name_of_script_dependencies'),
-       '1.0' );
+       get_bloginfo('template_directory') . '/js/modernizer.min.js', array() , '1.0' );
    // enqueue the script
    wp_enqueue_script('custom_script');
 }

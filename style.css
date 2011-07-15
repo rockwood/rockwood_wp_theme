@@ -29,7 +29,7 @@ input,select { vertical-align:middle; }
  * Base Typography 
  *
  */
-body { font:16px/1.231 'TradeG', sans-serif; }
+body { font:16px/1.231 'adelle-1','adelle-2',Georgia,"Times New Roman",serif;, sans-serif; }
 select,input,textarea,button { font:99% sans-serif; }
 pre,code,kbd,samp { font-family:monospace, sans-serif; }
 
@@ -106,8 +106,8 @@ input:invalid,textarea:invalid { border-radius:1px; -moz-box-shadow:0 0 5px red;
 /* These selection declarations have to be separate.
    No text-shadow: twitter.com/miketaylr/status/12228805301 
    Also: hot pink. */
-::-moz-selection { background:#FF5E99; color:#fff; text-shadow:none; }
-::selection { background:#FF5E99; color:#fff; text-shadow:none; }
+::-moz-selection { background:#FBCF52; color:#fff; text-shadow:none; }
+::selection { background:#FBCF52; color:#fff; text-shadow:none; }
 
 /*  j.mp/webkit-tap-highlight-color */
 a:link { -webkit-tap-highlight-color:#FF5E99; }
@@ -198,7 +198,11 @@ clip:rect(1px,1px,1px,1px); }
  * Structure
  *
  */
-#page {width: 60em; margin: 0 auto; display:block; }
+
+
+#wrapper {clear: both; position: absolute;  top: 8em;  width: 100%; z-index: 10;}
+#main { width: 60em; margin: 0 auto;}
+
 #primary { float:left; margin:0 -240px 0 0; width:100%; }
 #content { margin:0 280px 0 0; }
 #main .widget-area { float:right; overflow:hidden; width:220px; }
@@ -217,22 +221,25 @@ clip:rect(1px,1px,1px,1px); }
  * Header
  *
  */
-#site-title { font-size:2em; font-weight:bold; margin:.67em 0; }
-#site-description { font-size:1em; font-weight:normal; margin:0 0 1em; }
+
+#branding{ position: fixed; top: 0; height: 6em; width: 100%; z-index: 100; background: url("img/bg_leather.png"); border-bottom: 1px solid #ddd; box-shadow: 0 0 .5em #999;}
+#branding .container{ width: 60em; margin: 0 auto; }
+#site-title { font-size:2em; font-weight:bold;}
+#site-description { font-size:1em; font-weight:normal; }
 
 /*
  *
  * Menu
  *
  */
-#access { background:#eee; display:block; float:left; margin:0 auto 1em; width:100%; }
+#access { display:block; float:left; width:100%; }
 #access ul { list-style:none; margin:0; padding-left:0; }
 #access li { float:left; position:relative; }
-#access a { display:block; line-height:2em; padding:0 1em; text-decoration:none; }
+#access a { display:block; line-height:2em; padding:0 1em; text-decoration:none; color: #eee; }
 #access ul ul { box-shadow:0 3px 3px rgba(0,0,0,0.2); -moz-box-shadow:0 3px 3px rgba(0,0,0,0.2); -webkit-box-shadow:0 3px 3px rgba(0,0,0,0.2); display:none; float:left; position:absolute; top:2em; left:0; z-index:99999; }
 #access ul ul ul { left:100%; top:0; }
 #access ul ul a { background:#333; color:#fff; line-height:1em; padding:.5em .5em .5em 1em; width:10em; height:auto; }
-#access li:hover > a,#access ul ul :hover > a { background:#333; color:#fff; }
+#access li:hover > a,#access ul ul :hover > a { color:#999; }
 #access ul ul a:hover { background:#000; }
 #access ul li:hover > ul { display:block; }
 
